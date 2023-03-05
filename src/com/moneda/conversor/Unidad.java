@@ -1,6 +1,6 @@
 package com.moneda.conversor;
 
-public abstract class Unidad {
+public abstract class Unidad implements Convertible {
 	private double valor;
 	private double cantidad;
 	private String tipoConversion;
