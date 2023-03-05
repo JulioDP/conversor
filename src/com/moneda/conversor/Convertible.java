@@ -2,6 +2,6 @@ package com.moneda.conversor;
 
 public interface Convertible {
 	
-	void convertir(Moneda moneda, String tipoConversion);
+	void convertir(Unidad moneda, String tipoConversion);
 	
 }
