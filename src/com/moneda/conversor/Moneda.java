@@ -26,7 +26,7 @@ public class Moneda extends Unidad implements Convertible{
 
 
 	@Override
-	public void convertir(Moneda moneda, String tipoConversion) {
+	public void convertir(Unidad moneda, String tipoConversion) {
 		// TODO Auto-generated method stub
 		switch(tipoConversion){
 		case "De Peso MXN a Dolar":
