@@ -1,8 +1,12 @@
 package com.moneda.conversor;
 
+import javax.swing.JOptionPane;
+
 public class Moneda extends Unidad implements Convertible{
 	
-	private String moneda;
+	private TiposMonedas tipoMoneda;
+	
+
 	
 
 	public Moneda() {
@@ -19,31 +23,46 @@ public class Moneda extends Unidad implements Convertible{
 		super(valor, cantidad);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-	public Moneda(double valor, double cantidad, String tipoConversion, String moneda) {
-		super(valor, cantidad, tipoConversion);
-		// TODO Auto-generated constructor stub
-		this.moneda = moneda;
-	}
+
 
 	@Override
 	public void convertir(Moneda moneda, String tipoConversion) {
 		// TODO Auto-generated method stub
+		switch(tipoConversion){
+		case "De Peso MXN a Dolar":
+			tipoMoneda = TiposMonedas.DOLAR;
+			this.setCantidad(moneda.getValor()*tipoMoneda.getValue());
+			break;
+		case "De Peso MXN a Euro":
+			tipoMoneda = TiposMonedas.EURO;
+			this.setCantidad(moneda.getValor()*tipoMoneda.getValue());
+			break;
+		case "De Peso MXN a Libras Esterlinas":
+			tipoMoneda = TiposMonedas.LIBRA;
+			this.setCantidad(moneda.getValor()*tipoMoneda.getValue());
+			break;
+		case "Peso MXN a Yen":
+			tipoMoneda = TiposMonedas.YEN;
+			this.setCantidad(moneda.getValor()*tipoMoneda.getValue());
+			break;
+		case "Peso MXN a Won":
+			tipoMoneda = TiposMonedas.WON;
+			this.setCantidad(moneda.getValor()*tipoMoneda.getValue());
+			break;
+		}
 		
 	}
 
-	public String getMoneda() {
-		return moneda;
+	public TiposMonedas getTipoMoneda() {
+		return tipoMoneda;
 	}
 
-	public void setMoneda(String moneda) {
-		this.moneda = moneda;
+	public void setTipoMoneda(TiposMonedas tipoMoneda) {
+		this.tipoMoneda = tipoMoneda;
 	}
+
 	
-	
-	
-	
+
 	
 	
 }
