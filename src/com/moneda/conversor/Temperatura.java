@@ -2,11 +2,7 @@ package com.moneda.conversor;
 
 public class Temperatura extends Unidad implements Convertible {
 	
-	private TiposTemperatura temperatura;
 	
-	
-	
-
 	public Temperatura() {
 		super();
 		// TODO Auto-generated constructor stub
